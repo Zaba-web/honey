@@ -1,6 +1,20 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.1.5/workbox-window.prod.mjs')
+const CACHE_NAME = "pwa-cache";
+const urlsToCache = [
+    "index.html",
+    "style.css",
+    "app.js"
+];
 
-workbox.routing.registerRoute(
-    ({request}) => request.destination === "image",
-    new workbox.strategies.CacheFisrt()
-);
+self.addEventListener("install", event => {
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then(cache => cache.addAll(urlsToCache))
+    );
+});
+
+self.addEventListener("fetch", event => {
+    event.respondWith(
+        caches.match(event.request)
+            .then(response => response || fetch(event.request))
+    );
+});
