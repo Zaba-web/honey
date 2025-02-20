@@ -21,6 +21,8 @@ const minuteSelector = document.querySelector("#minute")
 
 const closeNotificationNoSave = document.querySelector(".close-notification-popup-no-save")
 
+const ep = "http://chhoney64622.corsa.chost.com.ua";
+
 function setTheme(theme) {
     localStorage.setItem(THEME, theme);
     container.classList.remove(LIGHT_THEME)
@@ -97,3 +99,8 @@ showNotification.addEventListener("click", () => {
 closeNotificationNoSave.addEventListener("click", () => {
     notificationContainer.classList.remove('active');
 })
+
+fetch(ep)
+  .then(response => response.text())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
