@@ -75,9 +75,10 @@ main {
     min-height: 100vh;
     background-color: #EFF3EA;
     transition: .3s;
+    position: relative;
 }
 
-main.theme-dark {
+.theme-dark main {
     background-color: #1E201E;
 }
 
@@ -179,6 +180,7 @@ button {
     font-size: 20px;
     border: 0;
     outline: none;
+    border-radius: 15px;
 }
 
 .theme-white button {
@@ -282,9 +284,11 @@ button {
 }
 
 .view iframe {
-    width: 100%;
-    height: 100%;
+    width: 150%;
+    height: 150%;
     border: 0;
+    transform: scale(0.7);
+    transform-origin: 0 0;
 }
 
 .view.active {
@@ -311,4 +315,100 @@ button {
     background-position: center;
     background-size: 50%;
     background-repeat: no-repeat;
+}
+
+.map-container {
+    display: flex;
+    height: 320px;
+    width: 100%;
+    overflow-x: scroll;
+    margin-top:10px;
+    gap: 15px;
+}
+
+.map-container img {
+    height: 100%;
+}
+
+.notification-trigger {
+    width: 100%
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: .5s;
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+.theme-white footer {
+    background-color: #1E201E;
+    color: #EFF3EA;
+}
+
+.theme-dark footer {
+    background-color: #EFF3EA;
+    color: #1E201E;
+}
+
+.notification-popup {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: -500px;
+    box-sizing: border-box;
+    padding: 25px;
+    transition: .3s;
+    font-family: 'Roboto';
+}
+
+.theme-dark .notification-popup {
+    background-color: #1E201E;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    color: #EFF3EA;
+}
+
+.theme-white .notification-popup {
+    background-color: #EFF3EA;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    color: #1E201E;
+}
+
+.notification-popup b {
+    font-size: 21px;
+    font-weight: 100;
+}
+
+.notification-popup.active {
+    display: block;
+    z-index: 888;
+    bottom: 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+fieldset, select {
+    border: 0;
+    outline: none;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+select {
+    min-width: 120px;
+    box-sizing: border-box;
+    padding: 5px;
 }

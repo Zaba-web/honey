@@ -237,16 +237,79 @@
         <div class="button-contianer">
             <button class="show-more">ПОКАЗАТИ БІЛЬШЕ</button>
         </div>
+
         <p class="subtitle">
             КАРТА МЕДУ
         </p>
+        
+        <div class="map-container">
+            <img src="images/maps/1.jpg" data-view-link="images/maps/1.jpg">
+            <img src="images/maps/2.jpg" data-view-link="images/maps/2.jpg">
+            <img src="images/maps/3.jpg" data-view-link="images/maps/3.jpg">
+            <img src="images/maps/4.jpg" data-view-link="images/maps/4.jpg">
+            <img src="images/maps/5.png" onclick="window.open('https://public.tableau.com/app/profile/julialysenko/viz/2020_16130741268990/Dashboard1', '_blank');">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1310865.821725254!2d28.863875662413935!3d50.08095429400197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0LrQsNGA0YLQsCDQstGB0ZbRhSDQv9Cw0YHRltC6INCyINGD0LrRgNCw0ZfQvdGWIGdvb2dsZSBtYXBz!5e0!3m2!1sru!2sua!4v1740040589115!5m2!1sru!2sua" height="100%" style="border:0;" width="400px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-view-link="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1310865.821725254!2d28.863875662413935!3d50.08095429400197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0LrQsNGA0YLQsCDQstGB0ZbRhSDQv9Cw0YHRltC6INCyINGD0LrRgNCw0ZfQvdGWIGdvb2dsZSBtYXBz!5e0!3m2!1sru!2sua!4v1740040589115!5m2!1sru!2sua"></iframe>
+        </div>
+
+        <div class="button-contianer">
+            <button class="notification-trigger">СПОВІЩЕННЯ</button>
+        </div>
+
+        <footer>
+            <p>
+                ТФК ТНТУ
+            </p>
+        </footer>
     </main>
-
-    <div class="view">
-        <iframe seamless></iframe>
-        <div class="close"></div>
+    <div class="notification-popup">
+        <b>Сповіщення</b>
+        <div class="form-container">
+            <fieldset>
+                <label for="hour">Година</label>
+                <select name="hour" id="hour">
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="hour">Хвилина</label>
+                <select name="minute" id="minute">
+                    <option value="00">00</option>
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                    <option value="45">45</option>
+                </select>
+            </fieldset>
+        </div>
+        <div style="margin: 0; margin-top: 8px">
+            <button class="close-notification-popup">ЗБЕРЕГТИ</button>
+            <button class="close-notification-popup-no-save">ЗАКРИТИ</button>
+        </div>
     </div>
-
+    <div class="view"><iframe seamless></iframe> <div class="close"></div></div>
     <script src="app.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
