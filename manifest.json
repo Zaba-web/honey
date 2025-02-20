@@ -1,6 +1,6 @@
 {
     "name": "Honeylab",
-    "start_url": "/?home=true",
+    "start_url": "/honey?home=true",
     "display": "fullscreen",
     "orientation": "portrait",
     "icons": [
