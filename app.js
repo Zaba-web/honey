@@ -21,7 +21,7 @@ const minuteSelector = document.querySelector("#minute")
 
 const closeNotificationNoSave = document.querySelector(".close-notification-popup-no-save")
 
-const ep = "http://chhoney64622.corsa.chost.com.ua";
+const ep = "https://chhoney64622.corsa.chost.com.ua";
 
 function setTheme(theme) {
     localStorage.setItem(THEME, theme);
